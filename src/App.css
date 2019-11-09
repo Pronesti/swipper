@@ -1,0 +1,39 @@
+*{
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.imgbox{
+  height: 85vh;
+  width: 100vw;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* contain */
+}
+
+.noPeople{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.nameOnBox{
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+.descOnBox{
+  position: absolute;
+  bottom: 12%;
+  left: 0;
+  color:lightgray;
+  text-shadow: 2px 2px 4px #000000;
+}
