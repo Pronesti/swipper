@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Gallery(url) {
+export default function Gallery({photo}) {
     return (
-        <div className='imgbox' style={{backgroundImage: `url(${url})`}} />
+        <div className='imgbox2' style={{backgroundImage: `url(${photo})`}} />
     )
 }

@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { like, superLike, reject } from '../actions/mainActions';
 import { Swipeable } from 'react-swipeable';
-import { users } from '../dummy';
 import SwipeBox from '../components/SwipeBox';
 
 export default function Main() {
-  const [id, setId] = useState(0);
+  const id = useSelector(state => state.main.currentIndex);
+  const users = useSelector(state => state.main.users);
+  const dispatch = useDispatch();
   const swipe = eventData => {
     switch (eventData.dir) {
       case 'Left':
-        console.log('cancel');
-        setId(id + 1);
+        console.log('reject: ', id);
+        dispatch(reject());
         break;
       case 'Right':
-        console.log('like');
-        setId(id + 1);
+        console.log('like: ', id);
+        dispatch(like());
         break;
       case 'Up':
-        console.log('superlike');
-        setId(id + 1);
+        console.log('superlike: ', id);
+        dispatch(superLike());
         break;
       case 'Down':
-        console.log('down');
         break;
       default:
         break;
